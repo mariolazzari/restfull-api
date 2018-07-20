@@ -1,0 +1,30 @@
+{
+    "name": "restfull-api",
+    "version": "1.0.0",
+    "description": "Building RESTful Web APIs with Node.js and Express",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mariolazzari/restfull-api.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mariolazzari/restfull-api/issues"
+    },
+    "homepage": "https://github.com/mariolazzari/restfull-api#readme",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "mongoose": "^5.2.4"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "nodemon": "^1.18.3"
+    }
+}
