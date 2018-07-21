@@ -28,9 +28,27 @@ const getContact = (req, res) => {
         .catch(err => res.send(err));
 };
 
+// update contact
+const updateContact = (req, res) => {
+    Contact.findOneAndUpdate({ _id: req.params.contactId }, req.body, {
+        new: true
+    })
+        .then(c => res.json(c))
+        .catch(err => res.send(err));
+};
+
+// delete contact
+const deleteContact = (req, res) => {
+    Contact.remove({ _id: req.body.contactId })
+        .then(() => res.json({ message: "Contact deleted" }))
+        .catch(err => () => res.send(err));
+};
+
 // module exports
 module.exports = {
     addNewContact,
     getContacts,
-    getContact
+    getContact,
+    updateContact,
+    deleteContact
 };

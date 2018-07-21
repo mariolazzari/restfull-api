@@ -1,7 +1,9 @@
 const {
     addNewContact,
     getContacts,
-    getContact
+    getContact,
+    updateContact,
+    deleteContact
 } = require("../controllers/crmController");
 
 const routes = app => {
@@ -15,8 +17,8 @@ const routes = app => {
 
     app.route("/contact/:contactId")
         .get(getContact)
-        .put((req, res) => res.send("PUT contact"))
-        .delete((req, res) => res.send("DELETE contact"));
+        .put(updateContact)
+        .delete(deleteContact);
 };
 
 module.exports = routes;

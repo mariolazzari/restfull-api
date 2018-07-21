@@ -24,6 +24,8 @@ app.use(bodyParser.json());
 // express routings
 crmRoutes(app);
 app.get("/", (req, res) => res.send(`Server started on port ${PORT}`));
+// serve static files
+app.use(express.static("public"));
 
 // start express server
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
